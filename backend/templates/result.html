@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🩺 Prediction Result</h1>
+        <p id="prediction-text"></p>
+        <a href="{{ url_for('index') }}" class="btn">🔙 Go Back</a>
+    </div>
+    <script>
+        // Get the result from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const risk = urlParams.get('risk');
+        document.getElementById('prediction-text').textContent =
+            `Predicted Heart Disease Risk: ${risk}`;
+    </script>
+</body>
+</html>

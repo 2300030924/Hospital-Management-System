@@ -1,0 +1,134 @@
+/* Background */
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:rgb(174, 103, 49);
+ background: url("images/background.jpg") no-repeat center center fixed;
+   background-size: cover;
+}
+
+/* Glass container */
+.container.glass{
+  max-width: 880px;
+  margin: 6vh auto;
+  padding: 28px 28px 36px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Headings */
+h1{
+  margin: 0 0 6px;
+  text-align:center;
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 800;
+  color:#34bbbb;
+}
+.subtitle{
+  text-align:center;
+  margin: 0 0 18px;
+  color:#afbb2c;
+}
+.heart{ font-size: 1.1em }
+
+/* Grid form */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 14px 18px;
+}
+@media (max-width: 640px){
+  .grid{ grid-template-columns: 1fr; }
+}
+
+/* Inputs */
+.form-group label{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
+.form-group label span{
+  font-weight:500;
+  color:#dcced5;
+  opacity:.8;
+}
+input[type="number"]{
+  width:95%;
+  padding: 10px 12px;
+  border-radius:10px;
+  border:1px solid rgba(11,27,31,.18);
+  background: rgba(255,255,255,.75);
+  outline:none;
+  transition: box-shadow .2s, border-color .2s;
+}
+input[type="number"]:focus{
+  border-color:#8ba12a;
+  box-shadow:0 0 0 4px rgba(187, 213, 15, 0.15);
+}
+
+/* Button */
+.btn{
+  margin-top:16px;
+  width:100%;
+  padding:12px 14px;
+  border:0;
+  border-radius:12px;
+  background:#0f766e;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .05s ease, background .2s ease;
+}
+.btn:hover{ background:#0b5d57 }
+.btn:active{ transform: translateY(1px) }
+
+/* Result card */
+.result-card{
+  margin-top:18px;
+  border-radius:14px;
+  padding:16px;
+  border:1px solid rgba(0,0,0,.06);
+  background: rgba(255,255,255,.75);
+}
+.result-title{ font-weight:700; margin-bottom:6px }
+.result-value{ font-size:20px; font-weight:800 }
+.result-sub{ margin-top:4px; color:#294347 }
+.result-card ul{ margin:10px 0 0 18px }
+
+/* Risk colors */
+.low    { border-left:8px solid #16a34a; background: rgba(139, 197, 160, 0.1) }
+.moderate{ border-left:8px solid #f59e0b; background: rgba(245,158,11,.12) }
+.high   { border-left:8px solid #d67171; background: rgba(220,38,38,.12) }
+
+/* Chart area */
+.chart-wrap{
+  margin-top:16px;
+  background: rgba(255,255,255,.7);
+  border-radius:14px;
+  padding:12px;
+}
+input[type="number"], 
+input[type="text"], 
+input[type="password"] {
+    background: rgba(255, 255, 255, 0.1); /* transparent with slight white tint */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 10px;
+    width: 95%;
+    color: #fff; /* white text */
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* On focus */
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff4d6d; /* highlight border (pink/red) */
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.6);
+}
